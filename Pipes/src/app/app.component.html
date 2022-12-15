@@ -4,15 +4,22 @@
     <tr>
       <th>ID:</th>
       <th>Name:</th>
+      <th>Gender</th>
       <th>City:</th>
+      <th>Fee</th>
     </tr>
   </thead>
   <tbody>
     <!--Ngfor Directives Strucltural Directives -->
     <tr *ngFor="let itr of students">
     <td>{{itr.ID}}</td>
-    <td>{{itr.Name}}</td>
-    <td>{{itr.City}}</td>
+    <!--Built in pipes denoted by(|)-->
+    <td>{{itr.Name | uppercase | custompipe: itr.Gender}}</td>
+    <td>{{itr.Gender| titlecase}}</td>
+    <td>{{itr.City | titlecase}}</td>
+    <td>{{itr.Fee |currency:'INR' :true}}</td>
   </tr>
   </tbody>
   </table>
+  <br>
+  <p>Date Pipe: {{today | date:'h:mm:ss'}}</p>
