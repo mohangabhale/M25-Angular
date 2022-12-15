@@ -1,0 +1,10 @@
+table, th, td {
+    border:1px solid rgb(62, 235, 10);
+    }
+    .colorClass{
+        color:rgb(110, 6, 207)
+    }
+    .para{
+        color: aqua;
+        background-color: blue;
+    }
